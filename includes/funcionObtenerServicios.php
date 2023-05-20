@@ -1,14 +1,13 @@
 <?php
 
-function obtenerservicios($nombreTabla)
+function obtenerservicios()
 {
   try {
-    $nombreTabla = "servicios";
     //importar datos de acceso
     require "databasesconeccion.php";
 
     //consulta sql
-    $consulta_sql = "SELECT * FROM $nombreTabla;";
+    $consulta_sql = "SELECT * FROM servicios;";
     //realizar la consulta
     $consulta = mysqli_query($db, $consulta_sql);
     //acceder a resultados
